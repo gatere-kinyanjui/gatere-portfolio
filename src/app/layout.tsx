@@ -3,6 +3,7 @@ import { Electrolize } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout-components/Header";
 import Footer from "./components/layout-components/Footer";
+import MaintenanceModal from "./components/display-components/MaintenanceModal";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],
@@ -20,15 +21,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isBeingMaintained = true;
+
   return (
     <html lang="en">
       <body
         className={electrolizeFont.className}
         suppressHydrationWarning={true}
       >
-        <Header />
-        {children}
-        <Footer />
+        {/* <Header /> */}
+        {isBeingMaintained ? (
+          <>
+            <MaintenanceModal />
+          </>
+        ) : (
+          <>{children}</>
+        )}
+        {/* <Footer /> */}
       </body>
     </html>
   );
