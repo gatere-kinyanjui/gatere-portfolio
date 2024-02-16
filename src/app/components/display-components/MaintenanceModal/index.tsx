@@ -2,8 +2,8 @@ import MaintenanceImage from "../MaintenanceImage";
 
 const MaintenanceModal = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12">
+    <section className="bg-white dark:bg-gray-900 h-screen">
+      <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12 h-full">
         <svg
           className="mx-auto mb-4 w-10 h-10 text-gray-400"
           xmlns="http://www.w3.org/2000/svg"
