@@ -20,6 +20,17 @@ const MaintenanceModal = () => {
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
           Our Enterprise administrators are performing scheduled maintenance.
         </p>
+        <h1 className="text-4xl mt-28 mb-20">Check back soon!</h1>
+
+        <div className="w-full bg-gray-200  dark:bg-gray-700">
+          <div
+            className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
+            style={{ width: "45%" }}
+          >
+            {" "}
+            45%
+          </div>
+        </div>
       </div>
 
       {/* <MaintenanceImage /> */}
