@@ -1,6 +1,8 @@
 import MaintenanceImage from "../MaintenanceImage";
 
 const MaintenanceModal = () => {
+  const hoverStyle = { color: "#7E0ACB" };
+
   return (
     <section className="bg-white dark:bg-gray-900 h-screen">
       <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12 h-full">
@@ -22,9 +24,9 @@ const MaintenanceModal = () => {
         </p>
         <h1 className="text-4xl mt-28 mb-20">Check back soon!</h1>
 
-        <div className="w-full bg-gray-200  dark:bg-gray-700">
+        <div className="w-full bg-gray-200 dark:bg-gray-700">
           <div
-            className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
+            className="bg-blue-gray text-xs font-medium text-black text-center p-1.5 leading-none "
             style={{ width: "25%" }}
           >
             {" "}

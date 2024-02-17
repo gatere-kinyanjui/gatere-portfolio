@@ -2,16 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-.electrolize-regular {
-  font-family: "Electrolize", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  background: #6699cc;
+  /* font-weight: 400;
+  line-height: 1.75; */
+  /* color: #000000; */
+  /* overflow-x: scroll; */
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
-  background-color: rgb(162, 228, 184) !important;
+  background-color: #6699cc !important;
   color: black !important;
 }
 

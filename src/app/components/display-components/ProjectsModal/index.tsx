@@ -5,7 +5,7 @@ import blogLogo from "../../../../../public/blog.svg";
 
 const ProjectsModal = () => {
   return (
-    <>
+    <div className="bg-black">
       <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Image
           width={20}
@@ -26,7 +26,7 @@ const ProjectsModal = () => {
         </p>
         <a
           href="#"
-          className="inline-flex font-medium items-center text-blue-600 hover:underline"
+          className="inline-flex font-medium items-center text-blue-gray hover:underline"
         >
           See project
         </a>
@@ -52,7 +52,7 @@ const ProjectsModal = () => {
         </p>
         <a
           href="#"
-          className="inline-flex font-medium items-center text-blue-600 hover:underline"
+          className="inline-flex font-medium items-center text-blue-gray hover:underline"
         >
           See project
         </a>
@@ -78,12 +78,12 @@ const ProjectsModal = () => {
         </p>
         <a
           href="x.com"
-          className="inline-flex font-medium items-center text-blue-600 hover:underline"
+          className="inline-flex font-medium items-center text-blue-gray hover:underline"
         >
           See project
         </a>
       </div>
-    </>
+    </div>
   );
 };
 

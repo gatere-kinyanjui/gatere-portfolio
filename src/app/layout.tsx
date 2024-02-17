@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Electrolize } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout-components/Header";
-import Footer from "./components/layout-components/Footer";
+
+import Navbar from "./components/layout-components/Navbar";
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
+import Footer from "./components/layout-components/Footer";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isBeingMaintained = true;
+  const isBeingMaintained = false;
 
   return (
     <html lang="en">
@@ -29,7 +30,7 @@ export default function RootLayout({
         className={electrolizeFont.className}
         suppressHydrationWarning={true}
       >
-        {/* <Header /> */}
+        <Navbar />
         {isBeingMaintained ? (
           <>
             <MaintenanceModal />
@@ -37,7 +38,7 @@ export default function RootLayout({
         ) : (
           <>{children}</>
         )}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
