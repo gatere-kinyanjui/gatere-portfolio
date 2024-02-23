@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { Electrolize } from "next/font/google";
 import "./globals.css";
+import { NextUIProviders } from "./providers/next-ui-providers";
 
 import Navbar from "./components/layout-components/Navbar";
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
 import Footer from "./components/layout-components/Footer";
+import NewNav from "./components/layout-components/Navbar/daisy-ui-nav";
+import SimpleNav from "./components/layout-components/Navbar/next-ui-nav";
+import NextUiNav from "./components/layout-components/Navbar/next-ui-nav";
+import DaisyUiNav from "./components/layout-components/Navbar/daisy-ui-nav";
+import DaisyFlexNav from "./components/layout-components/Navbar/daisy-flex-nav";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],
@@ -25,20 +31,25 @@ export default function RootLayout({
   const isBeingMaintained = false;
 
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body
         className={electrolizeFont.className}
         suppressHydrationWarning={true}
       >
-        <Navbar />
-        {isBeingMaintained ? (
-          <>
-            <MaintenanceModal />
-          </>
-        ) : (
-          <>{children}</>
-        )}
-        <Footer />
+        <NextUIProviders>
+          {/* <Navbar /> */}
+          {/* <NextUiNav /> */}
+          {/* <DaisyUiNav /> */}
+          <DaisyFlexNav />
+          {isBeingMaintained ? (
+            <>
+              <MaintenanceModal />
+            </>
+          ) : (
+            <>{children}</>
+          )}
+          <Footer />
+        </NextUIProviders>
       </body>
     </html>
   );

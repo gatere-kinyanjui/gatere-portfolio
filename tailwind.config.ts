@@ -1,3 +1,4 @@
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
 // const config = {
@@ -39,6 +40,7 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
     "./node_modules/flowbite-react/lib/**/*.js",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -53,7 +55,7 @@ const config: Config = {
       colors: {
         // CORE COLORS
         white: "#FFFFFF",
-        lighter: "#D2E5D0",
+        lighterGreen: "#D2E5D0",
         "blue-gray": "#6699CC",
 
         "gunmetal-gray": "#8D918D",
@@ -71,7 +73,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  darkMode: "class",
+  // plugins: [require("flowbite/plugin")],
+  // plugins: [nextui()],
+  plugins: [require("daisyui")],
 };
 
 export default config;
