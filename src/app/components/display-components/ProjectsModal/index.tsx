@@ -7,7 +7,7 @@ import Link from "next/link";
 const ProjectsModal = () => {
   return (
     <div className="bg-pewter flex flex-col py-8 gap-y-8 md:gap-6 justify-center items-center">
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}
@@ -33,7 +33,7 @@ const ProjectsModal = () => {
         </Link>
       </div>
 
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}
@@ -59,7 +59,7 @@ const ProjectsModal = () => {
         </Link>
       </div>
 
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}
@@ -85,7 +85,7 @@ const ProjectsModal = () => {
         </Link>
       </div>
 
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}
@@ -111,7 +111,7 @@ const ProjectsModal = () => {
         </Link>
       </div>
 
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}
@@ -137,7 +137,7 @@ const ProjectsModal = () => {
         </Link>
       </div>
 
-      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+      <div className="max-w-xs md:max-w-lg p-6 bg-white border border-gray-200 rounded-none shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
         <Image
           width={20}
           height={20}

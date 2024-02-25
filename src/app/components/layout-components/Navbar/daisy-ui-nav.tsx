@@ -34,7 +34,7 @@ const DaisyUiNav = () => {
           </div>
 
           <div className="flex-none hidden lg:flex justify-between">
-            <ul className="menu menu-horizontal bg-gray-50">
+            <ul className="menu menu-horizontal bg-gray-50 uppercase">
               {/* Navbar menu content here */}
               <Link
                 href={"/projects"}
@@ -76,13 +76,13 @@ const DaisyUiNav = () => {
         </div>
       </div>
 
-      <div className="drawer-side">
+      <div className="drawer-side uppercase">
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-gray-50">
+        <ul className="menu p-4 w-80 min-h-full bg-gray-50 uppercase md:flex-row">
           {/* Sidebar content here */}
           <Link
             href={"/projects"}

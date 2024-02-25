@@ -74,9 +74,7 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  // plugins: [require("flowbite/plugin")],
-  // plugins: [nextui()],
-  plugins: [require("daisyui")],
+  plugins: [require("flowbite/plugin"), nextui(), require("daisyui")],
 };
 
 export default config;

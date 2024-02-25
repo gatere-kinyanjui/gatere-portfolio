@@ -2,16 +2,18 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <h3 className="text-2xl">
-          Hello! Welcome to my porfolio. My name is Gatere
-        </h3>
+    <main className="text-black bg-pewter flex justify-center items-center h-[60%]">
+      <div className="text-left p-6 flex flex-col gap-y-2">
+        <h3 className="text-2xl">Hello! Welcome to my porfolio.</h3>
+
+        <h4 className="text-xl">My name is Gatere.</h4>
+
         <Link href={"/projects"} target="_blank">
-          <p className="hover:text-mediumaquamarine-400 cursor-pointer">
-            How I have Served Others
-          </p>
+          <h5 className="hover:text-blue-gray text-l cursor-h5ointer ">
+            How I have Served Others:
+          </h5>
         </Link>
+
         <Link href={"/projects"} target="_blank">
           Projects
         </Link>
