@@ -8,7 +8,7 @@ import githubLogo from "../../../../../public/github-logo.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-oracle border-gray-200 dark:bg-gray-900 h-[20%]">
+    <footer className="bg-oracle border-gray-200 dark:bg-gray-900">
       <nav className="w-full navbar bg-white flex items-center justify-between shadow-[0px_-10px_20px_0px_#00000024]">
         <Link href={"https://github.com/gatere-kinyanjui"} scroll={false}>
           <Image

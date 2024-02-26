@@ -31,7 +31,7 @@ export default function RootLayout({
   const isBeingMaintained = false;
 
   return (
-    <html lang="en" className="light h-[100%]">
+    <html lang="en" className="light">
       <body
         className={electrolizeFont.className}
         suppressHydrationWarning={true}
