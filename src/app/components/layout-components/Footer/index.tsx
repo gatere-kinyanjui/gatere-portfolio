@@ -10,7 +10,11 @@ const Footer = () => {
   return (
     <footer className="bg-oracle border-gray-200 dark:bg-gray-900">
       <nav className="w-full navbar bg-white flex items-center justify-between shadow-[0px_-10px_20px_0px_#00000024]">
-        <Link href={"https://github.com/gatere-kinyanjui"} scroll={false}>
+        <Link
+          href={"https://github.com/gatere-kinyanjui"}
+          scroll={false}
+          target="_blank"
+        >
           <Image
             src={githubLogo}
             alt={"github logo"}
@@ -23,6 +27,7 @@ const Footer = () => {
         <Link
           href={"https://www.linkedin.com/in/elvis-gideon-gatere-724514138/"}
           scroll={false}
+          target="_blank"
         >
           <Image
             src={linkedInLogo}

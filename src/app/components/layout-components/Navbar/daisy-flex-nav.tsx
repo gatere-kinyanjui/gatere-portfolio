@@ -93,7 +93,7 @@ const DaisyFlexNav = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-gray-50 flex flex-col">
+        <ul className="menu p-4 w-[75%] min-h-full bg-gray-50 flex flex-col gap-y-10 justify-start uppercase">
           {/* Sidebar content here */}
           <li>
             <Link

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="text-black bg-pewter flex justify-center items-center h-[60%]">
+    <main className="text-black bg-pewter flex justify-center items-center h-screen">
       <div className="text-left p-6 flex flex-col gap-y-2">
         <h3 className="text-2xl">Hello! Welcome to my porfolio.</h3>
 
@@ -14,9 +14,7 @@ export default function Home() {
           </h5>
         </Link>
 
-        <Link href={"/projects"} target="_blank">
-          Projects
-        </Link>
+        <Link href={"/projects"}>Projects</Link>
       </div>
     </main>
   );
