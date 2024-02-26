@@ -2,6 +2,7 @@ import Image from "next/image";
 import dashboardLogo from "../../../../../public/dashboard.svg";
 import bakeryLogo from "../../../../../public/bakery.svg";
 import blogLogo from "../../../../../public/blog.svg";
+import React from "react";
 
 const ProjectsModal = () => {
   return (

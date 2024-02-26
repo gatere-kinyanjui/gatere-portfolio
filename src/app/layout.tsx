@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/layout-components/Header";
 import Footer from "./components/layout-components/Footer";
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
+import React from "react";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],

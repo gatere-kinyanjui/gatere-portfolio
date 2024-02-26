@@ -1,4 +1,5 @@
-import MaintenanceModal from "@/app/components/display-components/MaintenanceModal";
+import React from "react";
+import MaintenanceModal from "../../components/display-components/MaintenanceModal";
 
 const Maintenance = () => {
   return <MaintenanceModal />;
