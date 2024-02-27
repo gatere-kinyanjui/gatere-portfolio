@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isBeingMaintained = false;
+  const isBeingMaintained = true;
 
   return (
     <html lang="en" className="light h-screen">

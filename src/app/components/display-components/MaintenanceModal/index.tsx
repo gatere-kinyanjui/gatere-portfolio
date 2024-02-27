@@ -3,7 +3,7 @@
 import React from "react";
 import { delay, motion } from "framer-motion";
 import { VisuallyHidden } from "@nextui-org/react";
-// import DefaultFooterComponent from "../flowbite-components/default-footer/defaultFooter";
+import DefaultFooterComponent from "../../flowbite-components/default-footer/defaultFooter";
 
 const MaintenanceModal = () => {
   return (
@@ -49,7 +49,9 @@ const MaintenanceModal = () => {
         {/* <div className="mt-4">Crafting pleasant web apps!</div> */}
       </div>
 
-      <div className="bg-">{/* <DefaultFooterComponent /> */}</div>
+      <div className="bg-">
+        <DefaultFooterComponent />
+      </div>
     </section>
   );
 };
