@@ -1,5 +1,6 @@
 import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -38,7 +39,18 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [require("flowbite/plugin"), nextui(), require("daisyui")],
+  plugins: [
+    require("flowbite/plugin"),
+    nextui(),
+    require("daisyui"),
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        h1: { fontSize: theme("fontSize.2xl") },
+        h2: { fontSize: theme("fontSize.xl") },
+        h3: { fontSize: theme("fontSize.lg") },
+      });
+    }),
+  ],
 };
 
 export default config;

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="text-black bg-pewter flex justify-center items-center h-screen">
+    <main className="text-black bg-gradient-to-b from-white to-pewter flex justify-center items-center h-screen">
       <div className="text-left p-6 flex flex-col gap-y-2">
-        <h3 className="text-2xl">Hello! Welcome to my porfolio.</h3>
+        <h3 className="text-2xl">Hello! Welcome to my portfolio.</h3>
 
         <h4 className="text-xl">My name is Gatere.</h4>
 

@@ -5,11 +5,11 @@ import burgerIcon from "../../../../../public/hamburger.svg";
 
 const DaisyFlexNav = () => {
   return (
-    <div className="drawer shadow-[0px_10px_20px_0px_#00000024] bg-oracle border-gray-200 dark:bg-gray-900">
+    <div className="drawer fixed z-9999 top-0 shadow-[0px_10px_20px_0px_#00000024] border-gray-200 dark:bg-gray-900">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-white flex items-center justify-between">
+        <div className="w-full navbar bg-pewter flex items-center justify-between">
           <div className="px-2 mx-2">
             <Link href={"/"} className="">
               <Image alt="home icon" src={homeIconTwo} width={32} height={32} />

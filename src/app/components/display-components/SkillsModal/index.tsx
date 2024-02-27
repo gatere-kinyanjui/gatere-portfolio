@@ -7,7 +7,7 @@ import nextjsLogo from "../../../../../public/nextjs-b-w-logo.svg";
 
 const SkillsModal = () => {
   return (
-    <div className="flex flex-col justify-center w-full h-screen bg-pewter border-none border-gray-200  dark:bg-gray-800 dark:border-gray-700">
+    <div className="bg-gradient-to-b from-white to-pewter flex flex-col justify-center w-full h-screen border-none border-gray-200  dark:bg-gray-800 dark:border-gray-700">
       <ul
         role="list"
         className="flex flex-col w-[70%] gap-y-8 md:gap-6 justify-center self-center divide-y divide-gunmetal-gray dark:divide-gray-700"

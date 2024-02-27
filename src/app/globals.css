@@ -17,13 +17,14 @@ body {
   background: #e2e4df;
   line-height: 1.75;
   /* overflow-x: scroll; */
-  /* overflow: auto; */
+  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* min-height: 100vh; */
+  height: 100%;
   justify-content: space-between;
   background-color: rgba(205, 245, 28, 0.979);
+  padding-top: 63.99px;
 }
 
 /* html,

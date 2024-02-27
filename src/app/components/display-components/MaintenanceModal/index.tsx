@@ -4,7 +4,7 @@ const MaintenanceModal = () => {
   const hoverStyle = { color: "#7E0ACB" };
 
   return (
-    <section className="bg-white dark:bg-gray-900 h-screen">
+    <section className="bg-gradient-to-b from-white to-pewter dark:bg-gray-900 h-screen">
       <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12 h-full">
         <svg
           className="mx-auto mb-4 w-10 h-10 text-gray-400"

@@ -37,10 +37,8 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <NextUIProviders>
-          {/* <Navbar /> */}
-          {/* <NextUiNav /> */}
-          {/* <DaisyUiNav /> */}
           <DaisyFlexNav />
+
           {isBeingMaintained ? (
             <>
               <MaintenanceModal />
@@ -48,6 +46,7 @@ export default function RootLayout({
           ) : (
             <>{children}</>
           )}
+
           <Footer />
         </NextUIProviders>
       </body>
