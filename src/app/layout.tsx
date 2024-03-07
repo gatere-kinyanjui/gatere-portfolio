@@ -25,9 +25,9 @@ export default function RootLayout({
   const isBeingMaintained = true;
 
   return (
-    <html lang="en">
+    <html lang="en" className="light h-[100%]">
       <body
-        className={electrolizeFont.className}
+        className={`${electrolizeFont.className} h-[100%]`}
         suppressHydrationWarning={true}
       >
         {/* <Header /> */}
