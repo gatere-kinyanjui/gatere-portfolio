@@ -5,7 +5,7 @@ import burgerIcon from "../../../../../public/hamburger.svg";
 
 const DaisyFlexNav = () => {
   return (
-    <div className="drawer fixed z-9999 top-0 shadow-[0px_10px_20px_0px_#00000024] border-gray-200 dark:bg-gray-900">
+    <div className="drawer fixed min-h-fit z-9999 top-0 shadow-[0px_10px_20px_0px_#00000024] border-gray-200 dark:bg-gray-900">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}

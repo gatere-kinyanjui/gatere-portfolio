@@ -3,13 +3,9 @@ import { Electrolize } from "next/font/google";
 import "./globals.css";
 import { NextUIProviders } from "./providers/next-ui-providers";
 
-import Navbar from "./components/layout-components/Navbar";
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
 import Footer from "./components/layout-components/Footer";
-import NewNav from "./components/layout-components/Navbar/daisy-ui-nav";
-import SimpleNav from "./components/layout-components/Navbar/next-ui-nav";
-import NextUiNav from "./components/layout-components/Navbar/next-ui-nav";
-import DaisyUiNav from "./components/layout-components/Navbar/daisy-ui-nav";
+
 import DaisyFlexNav from "./components/layout-components/Navbar/daisy-flex-nav";
 
 const electrolizeFont = Electrolize({
@@ -28,12 +24,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isBeingMaintained = true;
+  const isBeingMaintained = false;
 
   return (
-    <html lang="en" className="light h-screen">
+    <html lang="en" className="light h-[100%]">
       <body
-        className={electrolizeFont.className}
+        className={`${electrolizeFont.className} h-[100%]`}
         suppressHydrationWarning={true}
       >
         <NextUIProviders>
@@ -47,7 +43,7 @@ export default function RootLayout({
             <>{children}</>
           )}
 
-          <Footer />
+          {/* <Footer /> */}
         </NextUIProviders>
       </body>
     </html>

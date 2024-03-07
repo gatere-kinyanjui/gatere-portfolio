@@ -1,6 +1,7 @@
 import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
+import d from "./public/abstract-background-1.jpg";
 
 const config: Config = {
   content: [

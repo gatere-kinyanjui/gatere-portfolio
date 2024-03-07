@@ -8,24 +8,27 @@
   margin: 0;
 }
 
-html {
+/* html {
   font-size: 100%;
   height: 100%;
-}
+} */
 
-body {
+/* body {
   background: #e2e4df;
   line-height: 1.75;
-  /* overflow-x: scroll; */
-  /* overflow: scroll; */
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   justify-content: space-between;
-  background-color: rgba(205, 245, 28, 0.979);
+  background-color: #868b88;
   padding-top: 63.99px;
-}
+} */
+
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
 
 /* html,
 body,
@@ -34,8 +37,3 @@ div#__next,
 div#__next > div {
   height: 100%;
 } */
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
