@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light h-[100%]">
       <body
-        className={`${electrolizeFont.className} h-[100%]`}
+        className={`${electrolizeFont.className} h-[100%] md:flex md:justify-center`}
         suppressHydrationWarning={true}
       >
         {/* <Header /> */}

@@ -2,14 +2,18 @@
 
 import React from "react";
 import { delay, motion } from "framer-motion";
-import { VisuallyHidden } from "@nextui-org/react";
 import DefaultFooterComponent from "../flowbite-components/default-footer/defaultFooter";
-import FormModal from "../../modals/form-modal";
+import FormModal from "../../modals/markup-modal";
+import LibraryFormModal from "../../modals/library-modal";
 
 const MaintenanceModal = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 h-[100%] flex flex-col justify-between w-full">
-      <div className="pt-8 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12 h-full">
+    <section
+      className="bg-[#edf2f7] dark:bg-gray-900 h-[100%] flex flex-col justify-between md:w-[70%] w-[100%] 
+
+    "
+    >
+      <div className="pt-8 mx-auto max-w-screen-md items-center justify-center text-center lg:py-16 lg:px-12 h-full">
         <motion.div
           animate={{
             scale: [1, 2, 2, 1, 1],
@@ -33,11 +37,11 @@ const MaintenanceModal = () => {
           Under Maintenance
         </h1>
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
-          We are performing scheduled maintenance.
+          We are under the hood adjusting a few things
         </p>
-        <h1 className="text-4xl mt-28 mb-20">Please check back soon!</h1>
+        <h1 className="text-4xl mt-28 mb-20">Drop by in a jiffy!</h1>
 
-        <div className="w-full bg-gray-200  dark:bg-gray-700">
+        <div className="bg-gray-200  dark:bg-gray-700">
           <div
             className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
             style={{ width: "65%" }}
@@ -48,10 +52,13 @@ const MaintenanceModal = () => {
         </div>
 
         {/* <div className="mt-4">Crafting pleasant web apps!</div> */}
-        <FormModal />
+        <div className="flex justify-center p-0 m-0 mt-48 w-full self-center">
+          <LibraryFormModal />
+        </div>
+        {/* <MaintenanceFormModal /> */}
       </div>
 
-      <div className="pt-4">
+      <div className="pt-4 w-full">
         <DefaultFooterComponent />
       </div>
     </section>
