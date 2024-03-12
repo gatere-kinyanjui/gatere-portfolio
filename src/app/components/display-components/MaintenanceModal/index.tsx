@@ -39,7 +39,7 @@ const MaintenanceModal = () => {
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
           We are under the hood adjusting a few things
         </p>
-        <h1 className="text-4xl mt-28 mb-20">Drop by in a jiffy!</h1>
+        <h1 className="text-4xl mt-28 mb-20">Please check back soon!</h1>
 
         <div className="bg-gray-200  dark:bg-gray-700">
           <div
