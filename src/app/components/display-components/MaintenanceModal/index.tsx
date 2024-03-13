@@ -9,11 +9,11 @@ import LibraryFormModal from "../../modals/library-modal";
 const MaintenanceModal = () => {
   return (
     <section
-      className="bg-[#edf2f7] dark:bg-gray-900 h-[100%] flex flex-col justify-between md:w-[70%] w-[100%] 
+      className="bg-[#edf2f7] dark:bg-gray-900 h-[100%] flex flex-col justify-between sm:w-[70%] w-[100%] 
 
     "
     >
-      <div className="pt-8 mx-auto max-w-screen-md items-center justify-center text-center lg:py-16 lg:px-12 h-full">
+      <div className="pt-8 flex flex-col w-full mx-auto max-w-screen-md items-center justify-center text-center lg:py-16 lg:px-12 h-full">
         <motion.div
           animate={{
             scale: [1, 2, 2, 1, 1],
@@ -33,15 +33,15 @@ const MaintenanceModal = () => {
             />
           </svg>
         </motion.div>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 lg:mb-6 md:text-5xl xl:text-6xl dark:text-white">
+        <h1 className="mb-4 text-4xl font-bold sm:uppercase tracking-tight leading-none text-gray-900 lg:mb-6 sm:text-5xl xl:text-6xl dark:text-white">
           Under Maintenance
         </h1>
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
           We are under the hood adjusting a few things
         </p>
-        <h1 className="text-4xl mt-28 mb-20">Please check back soon!</h1>
+        <h2 className="text-2xl mt-28 mb-20">Please check back soon!</h2>
 
-        <div className="bg-gray-200  dark:bg-gray-700">
+        <div className="bg-gray-200 w-[70%] dark:bg-gray-700">
           <div
             className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
             style={{ width: "65%" }}
@@ -52,13 +52,13 @@ const MaintenanceModal = () => {
         </div>
 
         {/* <div className="mt-4">Crafting pleasant web apps!</div> */}
-        <div className="flex justify-center p-0 m-0 mt-48 w-full self-center">
+        <div className="flex justify-center p-0 m-0 w-full self-center max-[340px]:text-sm">
           <LibraryFormModal />
         </div>
         {/* <MaintenanceFormModal /> */}
       </div>
 
-      <div className="pt-4 w-full">
+      <div className="w-full">
         <DefaultFooterComponent />
       </div>
     </section>
