@@ -1,14 +1,20 @@
 "use client";
 
 import { clientCallbackDetails } from "@/firebase-services/firestore/firestore";
-import { Button, Label, Modal, TextInput } from "flowbite-react";
+import { Button, Label, Modal, TextInput, Textarea } from "flowbite-react";
 import { useRef, useState } from "react";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
+
+import MessageSuccess from "../../feedback-toasts/message-success";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface IClientData {
   email: string;
   name: string;
   phoneNumber: string;
-  location: string;
+  message: string;
 }
 
 function LibraryFormModal() {
@@ -18,27 +24,32 @@ function LibraryFormModal() {
     email: "",
     name: "",
     phoneNumber: "",
-    location: "",
+    message: "",
   });
 
   function onCloseModal() {
     setOpenModal(false);
   }
 
-  const submitFormData = async (formData: IClientData) => {
-    console.log("Form submitted");
+  const contextClass = {
+    success: "bg-blue-50 text-black",
+    error: "bg-red-50 text-black",
+    info: "bg-gray-600",
+    warning: "bg-orange-400",
+    default: "bg-indigo-600",
+    dark: "bg-white-600 font-gray-300",
+  };
 
+  const submitFormData = async (formData: IClientData) => {
     try {
       const contactInfo: IClientData = {
         email: formData.email,
         name: formData.name,
         phoneNumber: formData.phoneNumber,
-        location: formData.location,
+        message: formData.message,
       };
 
       await clientCallbackDetails(contactInfo);
-
-      console.log("Front-end client data captured");
     } catch (error: any) {
       console.log("A front-end error occurred: ", error);
     }
@@ -47,6 +58,56 @@ function LibraryFormModal() {
   const handleSubmitContactInfo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     submitFormData(clientData);
+    setClientData({
+      email: "",
+      name: "",
+      phoneNumber: "",
+      message: "",
+    });
+    setOpenModal(false);
+  };
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY &&
+      formRef.current
+    ) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          {
+            // publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+          }
+        )
+        .then(
+          (res: EmailJSResponseStatus) => {
+            console.log("SUCCESS! ", res);
+            formRef.current?.reset;
+            e.target.removeEventListener;
+            setOpenModal(false);
+            setClientData({
+              email: "",
+              name: "",
+              phoneNumber: "",
+              message: "",
+            });
+            toast.success("Message sent successfully!");
+          },
+          (error: { text: any }) => {
+            console.log("FAILED...", error.text);
+            toast.error("Ngori!");
+            toast.success("Message sent successfully!");
+          }
+        );
+    }
   };
 
   // const formRef = useRef<HTMLFormElement>(null);
@@ -67,14 +128,14 @@ function LibraryFormModal() {
   //     const email = refFormData.get("email")?.toString() || "";
   //     const name = refFormData.get("name")?.toString() || "";
   //     const phoneNumber = refFormData.get("phoneNumber")?.toString() || "";
-  //     const location = refFormData.get("location")?.toString() || "";
+  //     const message = refFormData.get("message")?.toString() || "";
 
   //     try {
   //       const refUserCredentials: IClientData = {
   //         email,
   //         name,
   //         phoneNumber,
-  //         location,
+  //         message,
   //       };
 
   //       await clientCallbackDetails(refUserCredentials);
@@ -107,14 +168,16 @@ function LibraryFormModal() {
             </h3>
 
             <form
+              ref={formRef}
               className="flex flex-col gap-8"
-              onSubmit={handleSubmitContactInfo}
+              onSubmit={sendEmail}
             >
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="email" value="Email" />
                 </div>
                 <TextInput
+                  name="email"
                   id="email"
                   placeholder="name@provider.com"
                   value={clientData.email}
@@ -130,6 +193,7 @@ function LibraryFormModal() {
                   <Label htmlFor="name" value="Name" />
                 </div>
                 <TextInput
+                  name="name"
                   id="name"
                   type="text"
                   value={clientData.name}
@@ -142,9 +206,10 @@ function LibraryFormModal() {
 
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="" value="Phone number" />
+                  <Label htmlFor="phone_number" value="Phone number" />
                 </div>
                 <TextInput
+                  name="phone_number"
                   id="phoneNumber"
                   type="tel"
                   value={clientData.phoneNumber}
@@ -160,16 +225,17 @@ function LibraryFormModal() {
 
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="location" value="Location" />
+                  <Label htmlFor="message" value="Message" />
                 </div>
-                <TextInput
-                  id="location"
-                  type="text"
-                  value={clientData.location}
+                <Textarea
+                  name="message"
+                  id="message"
+                  value={clientData.message}
                   onChange={(e) =>
-                    setClientData({ ...clientData, location: e.target.value })
+                    setClientData({ ...clientData, message: e.target.value })
                   }
                   required
+                  rows={4}
                 />
               </div>
 
@@ -184,105 +250,16 @@ function LibraryFormModal() {
             </form>
           </div>
         </Modal.Body>
-
-        {/* <div className="w-full md:w-96 md:max-w-full mx-auto">
-          <div className="p-6 border border-gray-300 sm:rounded-md">
-            <form method="POST" action="https://herotofu.com/start">
-              <label className="block mb-6">
-                <span className="text-gray-700">Your name</span>
-                <input
-                  type="text"
-                  name="name"
-                  className="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                  placeholder="Joe Bloggs"
-                />
-              </label>
-              <label className="block mb-6">
-                <span className="text-gray-700">Email address</span>
-                <input
-                  name="email"
-                  type="email"
-                  className="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                  placeholder="joe.bloggs@example.com"
-                  required
-                />
-              </label>
-              <label className="block mb-6">
-                <span className="text-gray-700">Message</span>
-                <textarea
-                  name="message"
-                  className="
-            block
-            w-full
-            mt-1
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          "
-                  rows={3}
-                  placeholder="Tell us what you're thinking about..."
-                ></textarea>
-              </label>
-              <div className="mb-6">
-                <button
-                  type="submit"
-                  className="
-            h-10
-            px-5
-            text-indigo-100
-            bg-indigo-700
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-          "
-                >
-                  Contact Us
-                </button>
-              </div>
-              <div>
-                <div className="mt-2 text-gray-700 text-right text-xs">
-                  by
-                  <a
-                    href="https://herotofu.com"
-                    className="hover:underline"
-                    target="_blank"
-                  >
-                    HeroTofu
-                  </a>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div> */}
       </Modal>
+      <ToastContainer
+        toastClassName={(context) =>
+          contextClass[context?.type || "default"] +
+          " relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
+        }
+        bodyClassName={() => "text-sm font-white font-med block p-3"}
+        position="top-center"
+        autoClose={3000}
+      />
     </>
   );
 }

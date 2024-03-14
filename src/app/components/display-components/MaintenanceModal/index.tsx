@@ -52,7 +52,7 @@ const MaintenanceModal = () => {
         </div>
 
         {/* <div className="mt-4">Crafting pleasant web apps!</div> */}
-        <div className="flex justify-center p-0 m-0 w-full self-center max-[340px]:text-sm">
+        <div className="flex justify-center text-nowrap p-0 m-0 w-full self-center max-[340px]:text-sm">
           <LibraryFormModal />
         </div>
         {/* <MaintenanceFormModal /> */}

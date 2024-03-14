@@ -5,6 +5,7 @@ import Header from "./components/layout-components/Header";
 import Footer from "./components/layout-components/Footer";
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
 import React from "react";
+import { ToastContainer } from "react-toastify";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],

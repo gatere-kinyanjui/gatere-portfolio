@@ -7,7 +7,7 @@ type TClientData = {
   email: string;
   name: string;
   phoneNumber: string;
-  location: string;
+  message: string;
 };
 
 export const clientCallbackDetails = async (clientCredentials: TClientData) => {
@@ -18,15 +18,8 @@ export const clientCallbackDetails = async (clientCredentials: TClientData) => {
 
       clientCredentials
     );
-    console.log(
-      "Back-end client data captured",
-      clientDocRef.id,
-      clientDocRef.path,
-      clientDocRef.type
-    );
+    console.log(clientDocRef.id, clientDocRef.path, clientDocRef.type);
   } catch (error: any) {
     console.log("A back-end error occurred: ", error);
   }
 };
-
-// console.log("Firestore instance:", db);
