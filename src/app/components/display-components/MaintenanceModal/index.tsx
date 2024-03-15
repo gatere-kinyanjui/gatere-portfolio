@@ -44,10 +44,10 @@ const MaintenanceModal = () => {
         <div className="bg-gray-200 w-[70%] dark:bg-gray-700">
           <div
             className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
-            style={{ width: "65%" }}
+            style={{ width: "85%" }}
           >
             {" "}
-            65%
+            85%
           </div>
         </div>
 

@@ -32,7 +32,7 @@ function LibraryFormModal() {
   }
 
   const contextClass = {
-    success: "bg-blue-50 text-black",
+    success: "bg-cyan-100 text-black",
     error: "bg-red-50 text-black",
     info: "bg-gray-600",
     warning: "bg-orange-400",
@@ -84,12 +84,11 @@ function LibraryFormModal() {
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
           formRef.current,
           {
-            // publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
           }
         )
         .then(
           (res: EmailJSResponseStatus) => {
-            console.log("SUCCESS! ", res);
             formRef.current?.reset;
             e.target.removeEventListener;
             setOpenModal(false);
@@ -102,9 +101,7 @@ function LibraryFormModal() {
             toast.success("Message sent successfully!");
           },
           (error: { text: any }) => {
-            console.log("FAILED...", error.text);
-            toast.error("Ngori!");
-            toast.success("Message sent successfully!");
+            toast.error("Oops...message not sent.");
           }
         );
     }
@@ -150,7 +147,7 @@ function LibraryFormModal() {
   // };
 
   return (
-    <>
+    <div className="w-[100%] flex justify-center">
       <Button
         className="flex justify-center bg-[#4b5563] text-white mx-24 rounded-md border-none mt-16 transition-none"
         onClick={() => setOpenModal(true)}
@@ -254,13 +251,14 @@ function LibraryFormModal() {
       <ToastContainer
         toastClassName={(context) =>
           contextClass[context?.type || "default"] +
-          " relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
+          " relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer w-[70%] items-center self-center"
         }
         bodyClassName={() => "text-sm font-white font-med block p-3"}
         position="top-center"
         autoClose={3000}
+        className="flex flex-col justify-center"
       />
-    </>
+    </div>
   );
 }
 
