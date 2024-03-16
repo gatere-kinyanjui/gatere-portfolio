@@ -73,25 +73,19 @@ function LibraryFormModal() {
     e.preventDefault();
 
     if (
-      // process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-      "service_3qpu88e" &&
-      // process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-      "template_tvzt18l" &&
-      // process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      "C4SeZf8Wmkiy2MU6W" &&
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY &&
       formRef.current
     ) {
       emailjs
         .sendForm(
-          // process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          "service_3qpu88e",
-          // process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          "template_tvzt18l",
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
           formRef.current,
 
           {
-            // publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-            publicKey: "C4SeZf8Wmkiy2MU6W",
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
           }
         )
         .then(
