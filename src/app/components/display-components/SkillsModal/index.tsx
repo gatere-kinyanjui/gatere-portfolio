@@ -4,19 +4,25 @@ import javascriptLogo from "../../../../../public/javascript-b-w-logo.svg";
 import reactLogo from "../../../../../public/react-b-w-logo.svg";
 import typescriptLogo from "../../../../../public/typescript-b-w-logo.svg";
 import nextjsLogo from "../../../../../public/nextjs-b-w-logo.svg";
+import firebaseLogo from "../../../../../public/firebase-b-w.svg";
 
 const SkillsModal = () => {
   return (
-    <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-      <div className="flex items-center justify-between mb-4">
-        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-          Skills
-        </h5>
+    <>
+      <div id="skills" className="flex justify-center my-5 lg:py-8">
+        <div className="flex  items-center">
+          <span className="w-24 h-[2px] bg-cyan-600"></span>
+          <span className="bg-cyan-600 w-fit text-white p-2 px-5 sm:text-xl text-l rounded-md">
+            Skills
+          </span>
+          <span className="w-24 h-[2px] bg-cyan-600"></span>
+        </div>
       </div>
-      <div className="flow-root">
+
+      <div className="flex flex-col justify-center w-full py-8 border-none">
         <ul
           role="list"
-          className="divide-y divide-gray-200 dark:divide-gray-700"
+          className="flex flex-col w-[75%] gap-y-8 md:gap-6 justify-center self-center divide-y divide-gray-500 dark:divide-gray-100"
         >
           <li className="py-3 sm:py-4">
             <div className="flex items-center">
@@ -30,28 +36,19 @@ const SkillsModal = () => {
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
                   HTML/CSS
                 </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Advanced
-                </p>
-              </div>
-              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $320
               </div>
 
-              <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="m3 2 1.6 17.8L12 22l7.5-2.2L21 2H3Zm14 6H9l.2 2H17l-.6 6.6-4.2 1.4-4.3-1.4-.3-3h2l.2 1.4 2.4.8 2.3-.7.3-3H7.4L7 6h10.4L17 8Z" />
-              </svg>
+              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                <p className="text-sm font-light text-black truncate dark:text-gray-50">
+                  Proficient
+                </p>
+              </div>
             </div>
           </li>
+
           <li className="py-3 sm:py-4">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
@@ -64,18 +61,18 @@ const SkillsModal = () => {
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
                   JavaScript
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Advanced
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $3467
+                <p className="text-sm font-light text-black truncate dark:text-gray-400">
+                  Proficient
+                </p>
               </div>
             </div>
           </li>
+
           <li className="py-3 sm:py-4">
             <div className="flex items-center">
               <div className="flex-shrink-0">
@@ -88,18 +85,18 @@ const SkillsModal = () => {
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
                   React
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Intermediate
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $67
+                <p className="text-sm font-light text-black truncate dark:text-gray-400">
+                  Learning
+                </p>
               </div>
             </div>
           </li>
+
           <li className="py-3 sm:py-4">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
@@ -112,18 +109,18 @@ const SkillsModal = () => {
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
                   Typescript
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Beginner
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $367
+                <p className="text-sm font-light text-black truncate dark:text-gray-400">
+                  Learning
+                </p>
               </div>
             </div>
           </li>
+
           <li className="pt-3 pb-0 sm:pt-4">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
@@ -136,21 +133,44 @@ const SkillsModal = () => {
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
                   Next.js
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Beginner
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                $2367
+                <p className="text-sm font-light text-black truncate dark:text-gray-400">
+                  Learning
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li className="pt-3 pb-0 sm:pt-4">
+            <div className="flex items-center ">
+              <div className="flex-shrink-0">
+                <Image
+                  width={20}
+                  height={20}
+                  className="w-8 h-8"
+                  src={firebaseLogo}
+                  alt="next.js logo"
+                />
+              </div>
+              <div className="flex-1 min-w-0 ms-4">
+                <p className="text-md font-bold text-gray-900 truncate dark:text-white">
+                  Firebase
+                </p>
+              </div>
+              <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                <p className="text-sm font-light text-black truncate dark:text-gray-400">
+                  Learning
+                </p>
               </div>
             </div>
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

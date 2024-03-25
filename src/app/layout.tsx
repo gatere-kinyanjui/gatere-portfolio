@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Electrolize } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout-components/Header";
-import Footer from "./components/layout-components/Footer";
+import { NextUIProviders } from "./providers/next-ui-providers";
+
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
 import React from "react";
 import { ToastContainer } from "react-toastify";
+
+import Navbar from "./components/layout-components/Navbar/navbar";
 
 const electrolizeFont = Electrolize({
   subsets: ["latin"],
@@ -23,23 +25,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isBeingMaintained = true;
+  const isBeingMaintained = false;
 
   return (
     <html lang="en" className="light h-[100%]">
       <body
+<<<<<<< HEAD
         className={`${electrolizeFont.className} h-[100%] md:flex md:justify-center`}
+=======
+        className={`${electrolizeFont.className} h-[100%] electrolize-regular`}
+>>>>>>> styling
         suppressHydrationWarning={true}
       >
-        {/* <Header /> */}
-        {isBeingMaintained ? (
-          <>
-            <MaintenanceModal />
-          </>
-        ) : (
-          <>{children}</>
-        )}
-        {/* <Footer /> */}
+        <NextUIProviders>
+          {/* <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white"> */}
+          <Navbar />
+
+          {isBeingMaintained ? (
+            <>
+              <MaintenanceModal />
+            </>
+          ) : (
+            <> {children}</>
+          )}
+          {/* <DefaultFooterComponent /> */}
+          {/* </main> */}
+        </NextUIProviders>
       </body>
     </html>
   );

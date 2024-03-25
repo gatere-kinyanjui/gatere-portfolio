@@ -2,6 +2,7 @@
 
 import React from "react";
 import { delay, motion } from "framer-motion";
+<<<<<<< HEAD
 import DefaultFooterComponent from "../flowbite-components/default-footer/defaultFooter";
 import FormModal from "../../modals/markup-modal";
 import LibraryFormModal from "../../modals/library-modal";
@@ -14,6 +15,15 @@ const MaintenanceModal = () => {
     "
     >
       <div className="pt-8 flex flex-col w-full mx-auto max-w-screen-md items-center justify-center text-center lg:py-16 lg:px-12 h-full">
+=======
+import { VisuallyHidden } from "@nextui-org/react";
+import DefaultFooterComponent from "../../flowbite-components/default-footer/defaultFooter";
+
+const MaintenanceModal = () => {
+  return (
+    <section className="bg-white dark:bg-gray-900 h-screen flex flex-col justify-between">
+      <div className="py-8 px-4 mx-auto max-w-screen-md text-center lg:py-16 lg:px-12 h-full">
+>>>>>>> styling
         <motion.div
           animate={{
             scale: [1, 2, 2, 1, 1],
@@ -33,6 +43,7 @@ const MaintenanceModal = () => {
             />
           </svg>
         </motion.div>
+<<<<<<< HEAD
         <h1 className="mb-4 text-4xl font-bold sm:uppercase tracking-tight leading-none text-gray-900 lg:mb-6 sm:text-5xl xl:text-6xl dark:text-white">
           Under Maintenance
         </h1>
@@ -40,18 +51,35 @@ const MaintenanceModal = () => {
           We are under the hood adjusting a few things
         </p>
         <h2 className="text-2xl mt-28 mb-20">Please check back soon!</h2>
+=======
+        <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 lg:mb-6 md:text-5xl xl:text-6xl dark:text-white">
+          Under Maintenance
+        </h1>
+        <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
+          We are performing scheduled maintenance.
+        </p>
+        <h1 className="text-4xl mt-28 mb-20">Please check back soon!</h1>
+>>>>>>> styling
 
         <div className="bg-gray-200 w-[70%] dark:bg-gray-700">
           <div
             className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
+<<<<<<< HEAD
             style={{ width: "85%" }}
           >
             {" "}
             85%
+=======
+            style={{ width: "45%" }}
+          >
+            {" "}
+            45%
+>>>>>>> styling
           </div>
         </div>
 
         {/* <div className="mt-4">Crafting pleasant web apps!</div> */}
+<<<<<<< HEAD
         <div className="flex justify-center text-nowrap p-0 m-0 w-full self-center max-[340px]:text-sm">
           <LibraryFormModal />
         </div>
@@ -59,6 +87,11 @@ const MaintenanceModal = () => {
       </div>
 
       <div className="w-full">
+=======
+      </div>
+
+      <div className="bg-">
+>>>>>>> styling
         <DefaultFooterComponent />
       </div>
     </section>
