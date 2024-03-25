@@ -1,7 +1,6 @@
 import Link from "next/link";
-<<<<<<< HEAD
+
 import React from "react";
-=======
 import Image from "next/image";
 import githubIcon from "../../public/github-dark-logo.svg";
 import linkedInIcon from "../../public/linkedin-dark-logo.svg";
@@ -12,7 +11,6 @@ import Skills from "./(pages)/skills/page";
 import Education from "./(pages)/education/page";
 import Work from "./(pages)/work/page";
 import Contact from "./(pages)/contact/page";
->>>>>>> styling
 
 export default function Home() {
   return (
