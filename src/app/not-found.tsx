@@ -4,15 +4,22 @@ import DefaultFooterComponent from "./components/flowbite-components/default-foo
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col justify-between bg-gradient-to-b from-white to-pewter text-black h-[100%]">
-      <div className="flex flex-col justify-center gap-y-8 items-center">
-        <h2 className="text-4xl font-bold text-center">Page Not Found</h2>
-        <p>Could not find requested resource</p>
+    <div className="h-full flex flex-col justify-between text-black bg-gradient-to-l from-gunmetal-gray to-[#BCECE0] bg-blend-multiply items-center">
+      <div className="rounded-lg bg-gray-200 p-8 m-8 text-center shadow-xl">
+        <h1 className="mb-4 text-4xl font-bold">404</h1>
+        <p className="text-gray-600">
+          Oops! The page you are looking for could not be found.
+        </p>
+        <a
+          href="/"
+          className="mt-4 inline-block rounded bg-cyan-600 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+        >
+          {" "}
+          Go back to Home{" "}
+        </a>
       </div>
 
-      <div>
-        <DefaultFooterComponent />
-      </div>
+      <DefaultFooterComponent />
     </div>
   );
 }

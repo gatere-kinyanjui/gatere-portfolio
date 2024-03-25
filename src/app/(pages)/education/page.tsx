@@ -1,7 +1,7 @@
-import EducationModal from "@/app/components/display-components/EducationModal";
+import LearningModal from "@/app/components/display-components/LearningModal";
 
-const Education = () => {
-  return <EducationModal />;
+const Learning = () => {
+  return <LearningModal />;
 };
 
-export default Education;
+export default Learning;
