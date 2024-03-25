@@ -1,11 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-<<<<<<< HEAD:src/firebase-services/firebaseConfig.ts
-=======
-import { getAnalytics } from "firebase/analytics";
-import { getStorage } from "firebase/storage";
-
->>>>>>> styling:src/firebase-services/firebase-config/firebaseConfig.ts
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

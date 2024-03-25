@@ -30,11 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light h-[100%]">
       <body
-<<<<<<< HEAD
-        className={`${electrolizeFont.className} h-[100%] md:flex md:justify-center`}
-=======
         className={`${electrolizeFont.className} h-[100%] electrolize-regular`}
->>>>>>> styling
         suppressHydrationWarning={true}
       >
         <NextUIProviders>
@@ -48,7 +44,6 @@ export default function RootLayout({
           ) : (
             <> {children}</>
           )}
-          {/* <DefaultFooterComponent /> */}
           {/* </main> */}
         </NextUIProviders>
       </body>

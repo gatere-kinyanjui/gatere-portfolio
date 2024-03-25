@@ -40,9 +40,6 @@ const config: Config = {
       },
     },
   },
-<<<<<<< HEAD
-  plugins: [require("flowbite/plugin"), nextui()],
-=======
   darkMode: "class",
   plugins: [
     require("flowbite/plugin"),
@@ -56,7 +53,6 @@ const config: Config = {
       });
     }),
   ],
->>>>>>> styling
 };
 
 export default config;

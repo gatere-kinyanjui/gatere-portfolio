@@ -2,11 +2,8 @@ import Image from "next/image";
 import dashboardLogo from "../../../../../public/dashboard.svg";
 import bakeryLogo from "../../../../../public/bakery.svg";
 import blogLogo from "../../../../../public/blog.svg";
-<<<<<<< HEAD
 import React from "react";
-=======
 import Link from "next/link";
->>>>>>> styling
 
 const ProjectsModal = () => {
   return (
