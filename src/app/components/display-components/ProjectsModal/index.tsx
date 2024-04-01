@@ -19,7 +19,7 @@ const ProjectsModal = () => {
       </div>
 
       <div className="flex flex-row flex-wrap py-8 gap-y-8 gap-6 justify-center">
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}
@@ -45,7 +45,7 @@ const ProjectsModal = () => {
           </Link>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}
@@ -71,7 +71,7 @@ const ProjectsModal = () => {
           </Link>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}
@@ -97,7 +97,7 @@ const ProjectsModal = () => {
           </Link>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}
@@ -123,7 +123,7 @@ const ProjectsModal = () => {
           </Link>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}
@@ -149,7 +149,7 @@ const ProjectsModal = () => {
           </Link>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-lighterGreen">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <Image
             width={20}
             height={20}

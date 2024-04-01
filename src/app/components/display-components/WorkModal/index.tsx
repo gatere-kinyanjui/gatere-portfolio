@@ -15,7 +15,7 @@ const WorkModal = () => {
       </div>
 
       <div className="flex flex-row flex-wrap py-8 gap-y-8 gap-6 justify-center">
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-blue-gray">
             Technical Customer Support & Success Lead
           </h5>
@@ -28,7 +28,7 @@ const WorkModal = () => {
             engineering team
           </p>
         </div>
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-blue-gray">
             Medical Marketer & Sales Rep
           </h5>
@@ -42,7 +42,7 @@ const WorkModal = () => {
           </p>
         </div>
 
-        <div className="max-w-xs md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
+        <div className="max-w-[90%] min-w-[80%] md:min-w-0 md:max-w-lg p-6 bg-cyan-300 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 border-none ease-in-out duration-1000 group hover:bg-cyan-50">
           <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-blue-gray">
             Technical Customer Support
           </h5>
