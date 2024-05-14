@@ -18,7 +18,10 @@ const LearningModal = () => {
           <h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white group-hover:text-blue-gray">
             Software Engineering
           </h5>
-          <Link target="_blank" href={"https://www.appacademy.io/"}>
+          <Link
+            target="_blank"
+            href={"https://www.appacademy.io/course/app-academy-open"}
+          >
             <p className="mb-3 font-normal text-gray-900 dark:text-gray-400 group-hover:text-black">
               App Academy Open
             </p>
