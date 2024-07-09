@@ -4,7 +4,7 @@ import javascriptLogo from "../../../../../public/javascript-b-w-logo.svg";
 import reactLogo from "../../../../../public/react-b-w-logo.svg";
 import typescriptLogo from "../../../../../public/typescript-b-w-logo.svg";
 import nextjsLogo from "../../../../../public/nextjs-b-w-logo.svg";
-import firebaseLogo from "../../../../../public/firebase-b-w.svg";
+import rubyLogo from "../../../../../public/ruby-logo.svg";
 
 const SkillsModal = () => {
   return (
@@ -43,7 +43,7 @@ const SkillsModal = () => {
 
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-50">
-                  Proficient
+                  Advanced
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ const SkillsModal = () => {
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Proficient
+                  Advanced
                 </p>
               </div>
             </div>
@@ -91,7 +91,7 @@ const SkillsModal = () => {
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Learning
+                  Intermediate
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ const SkillsModal = () => {
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Learning
+                  Beginner
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ const SkillsModal = () => {
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Learning
+                  Beginner
                 </p>
               </div>
             </div>
@@ -152,18 +152,18 @@ const SkillsModal = () => {
                   width={20}
                   height={20}
                   className="w-8 h-8"
-                  src={firebaseLogo}
+                  src={rubyLogo}
                   alt="next.js logo"
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
                 <p className="text-md font-bold text-gray-900 truncate dark:text-white">
-                  Firebase
+                  Ruby
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Learning
+                  Beginner
                 </p>
               </div>
             </div>
