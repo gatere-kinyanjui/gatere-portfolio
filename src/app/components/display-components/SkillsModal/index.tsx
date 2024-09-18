@@ -115,7 +115,7 @@ const SkillsModal = () => {
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                 <p className="text-sm font-light text-black truncate dark:text-gray-400">
-                  Beginner
+                  Intermediate
                 </p>
               </div>
             </div>
