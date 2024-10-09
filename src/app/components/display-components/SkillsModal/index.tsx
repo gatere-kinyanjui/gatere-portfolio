@@ -5,6 +5,7 @@ import reactLogo from "../../../../../public/react-b-w-logo.svg";
 import typescriptLogo from "../../../../../public/typescript-b-w-logo.svg";
 import nextjsLogo from "../../../../../public/nextjs-b-w-logo.svg";
 import rubyLogo from "../../../../../public/ruby-logo.svg";
+import nodeLogo from "../../../../../public/node-js-logo.svg";
 
 const SkillsModal = () => {
   return (
@@ -152,13 +153,13 @@ const SkillsModal = () => {
                   width={20}
                   height={20}
                   className="w-8 h-8"
-                  src={rubyLogo}
-                  alt="next.js logo"
+                  src={nodeLogo}
+                  alt="node.js logo"
                 />
               </div>
               <div className="flex-1 min-w-0 ms-4">
                 <p className="text-md font-bold text-gray-900 truncate dark:text-white">
-                  Ruby
+                  Node.js
                 </p>
               </div>
               <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
