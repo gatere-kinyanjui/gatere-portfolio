@@ -20,8 +20,8 @@ export default function Home() {
           Welcome to my portfolio
         </h1>
         <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48">
-          Passionate self-taught developer crafting beautiful and user-friendly
-          web experiences!
+          Passionate self-taught developer crafting user-friendly web
+          experiences!
         </p>
         <div className="flex flex-row justify-around items-center self-center gap-8 pace-y-0">
           <Link
