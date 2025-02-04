@@ -9,7 +9,7 @@ import LibraryFormModal from "../../modals/library-modal";
 const MaintenanceModal = () => {
   return (
     <section
-      className="bg-[#edf2f7] dark:bg-gray-900 h-[100%] flex flex-col justify-between sm:w-[70%] w-[100%] 
+      className="bg-[#edf2f7] dark:bg-gray-900 h-[100%] flex flex-col justify-between w-[100%] 
 
     "
     >
@@ -39,15 +39,15 @@ const MaintenanceModal = () => {
         <p className="font-light text-gray-500 md:text-lg xl:text-xl dark:text-gray-400">
           We are under the hood adjusting a few things
         </p>
-        <h2 className="text-2xl mt-28 mb-20">Please check back soon!</h2>
+        <h2 className="text-sm mt-28 mb-20">Please check back soon!</h2>
 
-        <div className="bg-gray-200 w-[70%] dark:bg-gray-700">
+        <div className="bg-gray-200 w-[70%] dark:bg-gray-700 rounded-md">
           <div
-            className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none "
-            style={{ width: "85%" }}
+            className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none rounded-l-md"
+            style={{ width: "65%" }}
           >
             {" "}
-            85%
+            65% Underway
           </div>
         </div>
 

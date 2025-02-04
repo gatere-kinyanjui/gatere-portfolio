@@ -5,9 +5,7 @@ import { NextUIProviders } from "./providers/next-ui-providers";
 
 import MaintenanceModal from "./components/display-components/MaintenanceModal";
 import React from "react";
-import { ToastContainer } from "react-toastify";
 
-import Navbar from "./components/layout-components/Navbar/navbar";
 import NavbarTwo from "./components/layout-components/second-nav";
 
 const electrolizeFont = Electrolize({
@@ -26,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isBeingMaintained = false;
+  const isBeingMaintained = true;
 
   return (
     <html lang="en" className="light h-[100%]">
@@ -35,14 +33,15 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <NextUIProviders>
-          <NavbarTwo />
-
           {isBeingMaintained ? (
             <>
               <MaintenanceModal />
             </>
           ) : (
-            <> {children}</>
+            <>
+              <NavbarTwo />
+              {children}
+            </>
           )}
         </NextUIProviders>
       </body>
