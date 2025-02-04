@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Electrolize } from "next/font/google";
+import { Electrolize, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { NextUIProviders } from "./providers/next-ui-providers";
 
@@ -9,6 +9,10 @@ import React from "react";
 import NavbarTwo from "./components/layout-components/second-nav";
 
 const electrolizeFont = Electrolize({
+  subsets: ["latin"],
+  weight: "400",
+});
+const sourceSans3 = Source_Sans_3({
   subsets: ["latin"],
   weight: "400",
 });
@@ -29,7 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="light h-[100%]">
       <body
-        className={`${electrolizeFont.className} h-[100%] electrolize-regular`}
+        // className={`${electrolizeFont.className} h-[100%] electrolize-regular`}
+        className={`${sourceSans3.className} h-[100%] source-sans-3`}
         suppressHydrationWarning={true}
       >
         <NextUIProviders>
