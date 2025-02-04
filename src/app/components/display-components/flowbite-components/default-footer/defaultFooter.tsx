@@ -9,7 +9,7 @@ function DefaultFooterComponent() {
       container
       className="w-full rounded-none shadow-[0px_0px_20px_5px_#00000024]"
     >
-      <Footer.Copyright by="Gatere™" year={2024} />
+      <Footer.Copyright by="Gatere™" year={2025} />
 
       <Footer.LinkGroup>
         {/* <Footer.Link href="#">About</Footer.Link>
