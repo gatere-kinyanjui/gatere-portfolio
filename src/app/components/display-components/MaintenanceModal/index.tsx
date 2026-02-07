@@ -41,13 +41,13 @@ const MaintenanceModal = () => {
         </p>
         <h2 className="text-sm mt-28 mb-20">Please check back soon!</h2>
 
-        <div className="bg-gray-200 w-[70%] dark:bg-gray-700 rounded-md">
+        <div className="bg-gray-200 w-[75%] dark:bg-gray-700 rounded-md text-center items-center">
           <div
-            className="bg-gray-600 text-xs font-medium text-blue-100 text-center p-1.5 leading-none rounded-l-md"
-            style={{ width: "65%" }}
+            className="bg-gray-600 text-xs font-medium text-blue-100 p-1.5 leading-none rounded-l-md"
+            style={{ width: "75%" }}
           >
             {" "}
-            65% Underway
+            75% Underway
           </div>
         </div>
 
