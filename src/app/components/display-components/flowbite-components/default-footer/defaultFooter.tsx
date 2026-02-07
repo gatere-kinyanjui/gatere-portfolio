@@ -1,6 +1,7 @@
 "use client";
 
 import { Footer } from "flowbite-react";
+import Link from "next/link";
 import React from "react";
 
 const currentYearMaintenanceFooter = new Date();
@@ -11,10 +12,12 @@ function DefaultFooterComponent() {
       container
       className="w-full rounded-none shadow-[0px_0px_20px_5px_#00000024]"
     >
-      <Footer.Copyright
-        by="Gatere™"
-        year={currentYearMaintenanceFooter.getFullYear()}
-      />
+      <Link href={"https://github.com/gatere-kinyanjui"}>
+        <Footer.Copyright
+          by="Gatere™"
+          year={currentYearMaintenanceFooter.getFullYear()}
+        />
+      </Link>
 
       <Footer.LinkGroup>
         {/* <Footer.Link href="#">About</Footer.Link>
